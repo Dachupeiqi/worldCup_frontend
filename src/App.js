@@ -23,7 +23,7 @@ import { Card, Col, Divider, Row } from 'antd'
 import {converTime} from './utils/others'
 import worldcup_abi from './abi/WorldCup.json'
 import { ClaimWctReward } from './conponents/Button/ClaimWctReward'
-
+import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 // const alchemyId = process.env.ALCHEMY_ID
 const alchemyId = "N5MaHwqpQ8xSrnZpshO6Vc-2iglJaep_"
 
@@ -44,6 +44,12 @@ const client = createClient({
         qrcode: true,
       },
     }),
+    new CoinbaseWalletConnector({
+      chains: chains,
+      options: {
+        qrcode: true,
+      },
+    })
   ],
   provider,
 })
