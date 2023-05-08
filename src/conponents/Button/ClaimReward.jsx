@@ -18,7 +18,7 @@ import {executeQuery} from '../../utils/others'
 import BigNumber from 'bignumber.js'
 export function ClaimReward() {
   const { config } = usePrepareContractWrite({
-    addressOrName: '0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+    addressOrName: '0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
     contractInterface: worldcup_abi.abi,
     functionName: 'claimReward',
   })
@@ -55,7 +55,7 @@ export function ClaimReward() {
 
    function FetchWinWallet(){
      const{ data} =  useContractRead({
-      addressOrName:'0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+      addressOrName:'0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
       contractInterface:worldcup_abi.abi,
       functionName: 'winnerVaults',
       args:[getAccount().address]
@@ -95,12 +95,16 @@ export function ClaimReward() {
                     </div>
                     {isSuccess && (
                       <div style={{ color: '#fff' }}>
+                          <div>
+                            <a
+                              target="_blank"
+                              href={`https://mumbai.polygonscan.com/tx/${data?.hash}`}
+                              rel="noreferrer"
+                            >
+                              交易成功！在polygonscan上查看
+                            </a>
+                          </div>
                         
-                        <div>
-                          <a href={`https://goerli.etherscan.io/tx/${data?.hash}`}>
-                          领奖成功！! 在Etherscan上查看！！
-                          </a>
-                        </div>
                       </div>
                     )}
                 </div>}

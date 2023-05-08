@@ -9,7 +9,7 @@
 
 ## 合约 hardhat 仓库
 
-合约 hardhat 仓库是该 DApp 的核心代码仓库，主要包含智能合约的编写、部署和测试代码。该仓库基于 hardhat 搭建，使用 Solidity 编写智能合约，部署在goerli测试网。
+合约 hardhat 仓库是该 DApp 的核心代码仓库，主要包含智能合约的编写、部署和测试代码。该仓库基于 hardhat 搭建，使用 Solidity 编写智能合约，部署在polygon mumbai测试网。
 
 该仓库包含以下几个主要的智能合约：
 
@@ -26,8 +26,6 @@
 - 使用React+Antd；
 - 使用Wagmi合约交互框架,其丰富的React Hook 极大简化开发；
 - 历史数据通过在线查询Thegraph；
-- Account：账户组件，展示用户的个人信息和余额等信息。
-
 
 ## Subgraph 仓库
 

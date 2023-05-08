@@ -24,7 +24,7 @@ export function Play() {
   const { 
     config ,
   } = usePrepareContractWrite({
-    addressOrName: '0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+    addressOrName: '0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
     contractInterface: worldcup_abi.abi,
     functionName: 'play',
     args: [inputValue],
@@ -46,7 +46,7 @@ export function Play() {
  
   function FetchCountry({num}){
      const { data} = useContractRead({
-    addressOrName:'0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+    addressOrName:'0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
     contractInterface:worldcup_abi.abi,
     functionName: 'countries',
     args:[num]
@@ -59,7 +59,7 @@ export function Play() {
 
   function FetchCurrentRoud(){
     const { data} = useContractRead({
-   addressOrName:'0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+   addressOrName:'0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
    contractInterface:worldcup_abi.abi,
    functionName: 'currRound',
  })
@@ -119,10 +119,10 @@ export function Play() {
                 <div>
                   <a
                     target="_blank"
-                    href={`https://goerli.etherscan.io/tx/${data?.hash}`}
+                    href={`https://mumbai.polygonscan.com/tx/${data?.hash}`}
                     rel="noreferrer"
                   >
-                    Etherscan
+                    交易成功！在polygonscan上查看
                   </a>
                 </div>
               </div>

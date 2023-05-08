@@ -38,7 +38,7 @@ export function Finalize() {
 
   const [value, setValue] = React.useState('')
   const { config } = usePrepareContractWrite({
-    addressOrName: '0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+    addressOrName: '0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
     contractInterface: worldcup_abi.abi,
     functionName: 'finialize',
     args: [value],
@@ -81,14 +81,15 @@ export function Finalize() {
               </Button>
               </div>
               {isSuccess && (
-                <div style={{ color: '#fff' }}>
-                  Successfully Played !
-                  <div>
-                    <a href={`https://goerli.etherscan.io/tx/${data?.hash}`}>
-                      Etherscan
-                    </a>
-                  </div>
-                </div>
+                <div>
+                <a
+                  target="_blank"
+                  href={`https://mumbai.polygonscan.com/tx/${data?.hash}`}
+                  rel="noreferrer"
+                >
+                  交易成功！在polygonscan上查看
+                </a>
+              </div>
               )}
           </div>
         }

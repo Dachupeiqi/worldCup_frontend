@@ -80,7 +80,7 @@ export function DistributeToken() {
 
 
   const { config } = usePrepareContractWrite({
-    addressOrName: '0xe49f175a25046bB3caB9b745583f8c6900CEb4B5',
+    addressOrName: '0xA469B9D3E5bB02887325dE6ec527CA657e0C18b1',
     contractInterface: worldcup_distri_abi.abi,
     functionName: 'distributeReward',
     args: [roundNum,distriAmount,blockNum,merkleRoot],
@@ -152,14 +152,15 @@ export function DistributeToken() {
               </Button>
             </div>
             {isSuccess && (
-              <div style={{ color: '#fff' }}>
-                Successfully Played !
-                <div>
-                  <a href={`https://goerli.etherscan.io/tx/${data?.hash}`}>
-                    Etherscan
-                  </a>
-                </div>
-              </div>
+              <div>
+              <a
+                target="_blank"
+                href={`https://mumbai.polygonscan.com/tx/${data?.hash}`}
+                rel="noreferrer"
+              >
+                交易成功！在polygonscan上查看
+              </a>
+            </div>
             )}
         </div>
 

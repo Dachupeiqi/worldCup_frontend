@@ -25,10 +25,10 @@ import worldcup_abi from './abi/WorldCup.json'
 import { ClaimWctReward } from './conponents/Button/ClaimWctReward'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 // const alchemyId = process.env.ALCHEMY_ID
-const alchemyId = "N5MaHwqpQ8xSrnZpshO6Vc-2iglJaep_"
+const alchemyId = "7LVXej7DBDmQUGr9uRUlqDIjMOkPRKr3"
 
 const { provider, chains } = configureChains(
-  [chain.goerli, chain.optimism, chain.arbitrum],
+  [chain.polygonMumbai],
   [alchemyProvider({ apiKey: alchemyId })]
 )
 
@@ -110,7 +110,7 @@ class App extends Component {
   render() {
     function FetchDeadLine(){
       const { data} = useContractRead({
-     addressOrName:'0xf9FDf6832eEdbAF5A3000A737Fa692838Ee8f8aC',
+     addressOrName:'0x6F38116237d73237810894c0dbc9d7c786E2EeBd',
      contractInterface:worldcup_abi.abi,
      functionName: 'deadline',
       })

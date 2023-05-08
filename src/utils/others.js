@@ -8,7 +8,7 @@ export  function converTime(t){
 
 
 
-  const graphUrl = "https://api.studio.thegraph.com/query/46165/worldcup/0.0.10"
+  const graphUrl = "https://api.studio.thegraph.com/query/46165/worldcup/0.0.11"
   export async function executeQuery(query, variables) {
     
     const client = new ApolloClient({
